@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      ebs: ["EBS훈민정음L"]
+    }
   },
   plugins: [],
 }

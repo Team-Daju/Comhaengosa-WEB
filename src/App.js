@@ -1,7 +1,10 @@
+import "./index.css"
+
 
 function App() {
   return (
-    <div className="App">
+    <div className="font-ebs">
+      훈민정음체?
     </div>
   );
 }
