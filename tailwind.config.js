@@ -5,7 +5,12 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primaryColor: "#007BFF",
+        textColor: "#5C5C5C"
+      }
+    },
     fontFamily: {
       ebs: ["EBS훈민정음L"]
     }

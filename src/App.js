@@ -1,10 +1,19 @@
+import tw from "tailwind-styled-components";
+import Main from "./components/Main";
 import "./index.css"
+import DontWorry from "./components/DontWorry";
 
+const Hr = tw.hr`
+  border-primaryColor opacity-20 mx-2
+`
 
 function App() {
   return (
-    <div className="font-ebs">
-      훈민정음체?
+    <div >
+      <Main />
+      <Hr />
+      <DontWorry />
+      <Hr />
     </div>
   );
 }
