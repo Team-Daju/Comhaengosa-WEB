@@ -15,6 +15,8 @@ module.exports = {
       ebs: ["EBS훈민정음L"]
     }
   },
-  plugins: [],
+  plugins: [
+    require("daisyui")
+  ],
 }
 

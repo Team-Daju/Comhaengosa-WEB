@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "daisyui": "^3.9.4",
     "tailwind-styled-components": "^2.2.0"
   }
 }
