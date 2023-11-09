@@ -2,7 +2,7 @@ import React from 'react';
 
 const Main = () => {
     return (
-        <div className='p-10 flex-col md:flex-row md:flex text-center md:text-left md:mt-36 justify-center md:space-x-20'>
+        <div className='p-10 flex-col md:flex-row md:flex text-center md:text-left  justify-center md:space-x-20'>
             <div className=' py-20'>
                 <div className='text-4xl md:text-5xl flex items-center font-bold justify-center md:justify-normal'>
                     왜 <span className='font-ebs pl-3 text-primaryColor'>컴행어사</span>인가?
