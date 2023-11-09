@@ -5,6 +5,7 @@ import DontWorry from "./components/DontWorry";
 import Smart from "./components/Smart";
 import Estimate from "./components/Estimate";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const Hr = tw.hr`
   border-primaryColor opacity-20 mx-2
@@ -22,6 +23,7 @@ function App() {
                 <Smart />
                 <Estimate />
             </div>
+            <Footer />
         </>
     );
 }
