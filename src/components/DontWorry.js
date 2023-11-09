@@ -1,6 +1,10 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import tw from "tailwind-styled-components";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
 
 const MeWrap = tw.div`
 flex justify-end ml-10
@@ -117,7 +121,7 @@ const chattings = [
         id: 4, chats: [
             {
                 who: 0,
-                content: "3안녕하세요. 견적 상담 받아보려고 하는데요.",
+                content: "4안녕하세요. 견적 상담 받아보려고 하는데요.",
             },
             {
                 who: 1,
@@ -141,7 +145,7 @@ const chattings = [
         id: 5, chats: [
             {
                 who: 0,
-                content: "3안녕하세요. 견적 상담 받아보려고 하는데요.",
+                content: "5안녕하세요. 견적 상담 받아보려고 하는데요.",
             },
             {
                 who: 1,
@@ -163,35 +167,26 @@ const chattings = [
     },
 ]
 
-const rowVariants = {
-    hidden: {
-        x: window.outerWidth + 2000,
-    },
-    visible: {
-        x: 0,
-    },
-    exit: {
-        x: -window.outerWidth - 2000,
-    },
-};
 
 
 const DontWorry = () => {
-    const [index, setIndex] = useState(1)
     const [leaving, setLeaving] = useState(false);
-
-    const toggleLeaving = () => setLeaving((prev) => !prev);
-
-    const [startIndex, setStartIndex] = useState(index - 1)
-    const [endIndex, setEndIndex] = useState(index + 2)
-    useEffect(() => {
-        //setInterval(() => setIndex(prev => prev === 2 ? 0 : prev + 1), 5000);
-    }, [])
-    const onClick = () => {
-        setIndex(prev => prev + 1)
+    const [isMd, setIsMd] = useState(false)
+    const isWindowMd = () => {
+        if (window.outerWidth < 768) setIsMd(true)
+        else setIsMd(false)
     }
+    useEffect(() => {
+
+        isWindowMd()
+        window.addEventListener("resize", () => {
+            console.log(window.outerWidth)
+            isWindowMd()
+        })
+
+    }, [])
     return (
-        <div className='pt-24' >
+        <div className='pt-24 overflow-x-hidden' >
             <div className='text-center mb-20' >
                 <div className='text-primaryColor font-bold text-2xl'>
                     쉽지 않은 서버 선택,
@@ -210,44 +205,43 @@ const DontWorry = () => {
                     </div>
                 </div>
             </div>
-            <div className=' overflow-x-hidden'>
-                <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
-                    <motion.div
-                        variants={rowVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ type: "tween", duration: 1 }}
-                        key={index}
-                        className=' grid grid-cols-1 md:grid-cols-3 justify-items-center md:gap-96 overflow-x-hidden overscroll-none'>
-                        {chattings
-                            .slice(index - 1, index + 2).map(chatting => (
-                                <div
-                                    className='bg-[#C6DCF1] md:w-[500px] p-5 rounded-t-3xl mx-4'>
+            <div className='mx-4 md:-mx-40'>
+                <Swiper
+                    slidesPerView={isMd ? 1 : 3}
+                    spaceBetween={100}
+                    grabCursor={true}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Pagination, Autoplay]}
+                    loop={true}
+                >
+                    {chattings
+                        .map(chatting => (
+                            <SwiperSlide
+                                className='bg-[#C6DCF1] p-5 rounded-t-3xl' style={{ width: "500px" }}>
 
-                                    <div className='flex justify-center font-bold pb-5'>
-                                        컴행어사
-                                    </div>
-                                    <div className='space-y-7'>
-                                        {chatting.chats.map(chat => (
-                                            chat.who === 0 ? <MeWrap>
-                                                <Me>
-                                                    {chat.content}
-                                                </Me>
-                                            </MeWrap> : <YouWrap >
-                                                <You>
-                                                    {chat.content}
-                                                </You>
-                                            </YouWrap>
-                                        ))}
-                                    </div>
+                                <div className='flex justify-center font-bold pb-5'>
+                                    컴행어사
                                 </div>
-                            ))}
-                    </motion.div>
-
-                </AnimatePresence>
+                                <div className='space-y-7'>
+                                    {chatting.chats.map(chat => (
+                                        chat.who === 0 ? <MeWrap>
+                                            <Me>
+                                                {chat.content}
+                                            </Me>
+                                        </MeWrap> : <YouWrap >
+                                            <You>
+                                                {chat.content}
+                                            </You>
+                                        </YouWrap>
+                                    ))}
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                </Swiper>
             </div>
-
         </div>
     );
 };
