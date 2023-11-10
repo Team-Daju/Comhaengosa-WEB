@@ -15,7 +15,8 @@ const Div = tw.div`
     bg-opacity-10
     bg-primaryColor
     py-5
-    px-56
+    px-10
+    md:px-56
     flex 
     flex-col
     md:flex-row
