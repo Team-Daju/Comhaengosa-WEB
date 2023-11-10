@@ -14,8 +14,8 @@ const Div = tw.div`
     rounded-xl
     bg-opacity-10
     bg-primaryColor
-    p-3
-    px-20
+    py-5
+    px-56
     flex 
     flex-col
     md:flex-row
