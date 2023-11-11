@@ -17,7 +17,7 @@ const HeaderContainer = tw.div`
   md:bg-white bg-black
   md:h-[150px] h-[50px]
   fixed top-0 left-0 right-0
-  px-6
+  md:px-6 px-3
   z-[10]
 `;
 
