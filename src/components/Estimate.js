@@ -9,7 +9,7 @@ const Estimate = () => {
                 </div>
                 <div className='flex justify-center'>
                     <button className='btn border-none flex items-center bg-primaryColor text-white hover:bg-primaryColor text-xl rounded-full px-5'>
-                        지금 견적 받기 <img src='/imgs/aero.png' className='w-6 h-6' />
+                        무료 견적 받기 <img src='/imgs/aero.png' className='w-6 h-6' />
                     </button>
                 </div>
 

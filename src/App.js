@@ -8,14 +8,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const Hr = tw.hr`
-  border-primaryColor opacity-20 mx-2
+  border-primaryColor mx-32 opacity-20
 `;
 
 function App() {
     return (
         <>
             <Header />
-            <div className="bg-white text-black">
+            <div className="bg-white text-black space-y-20 ">
                 <Main />
                 <Hr />
                 <DontWorry />

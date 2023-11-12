@@ -22,15 +22,15 @@ const HeaderContainer = tw.div`
 `;
 
 const Header = () => {
-    return (
-        <HeaderContainer>
-            {/* MD 화면 크기에서 왼쪽에 로고, 그렇지 않을 경우 중앙에 위치 */}
-            <Logo className="md:static absolute left-1/2 transform md:translate-x-0 -translate-x-1/2">
-                컴행어사
-            </Logo>
-            <Button>지금 견적 받기</Button>
-        </HeaderContainer>
-    );
+  return (
+    <HeaderContainer>
+      {/* MD 화면 크기에서 왼쪽에 로고, 그렇지 않을 경우 중앙에 위치 */}
+      <Logo className="md:static absolute left-1/2 transform md:translate-x-0 -translate-x-1/2">
+        컴행어사
+      </Logo>
+      <Button>무료 견적 받기</Button>
+    </HeaderContainer>
+  );
 };
 
 export default Header;
