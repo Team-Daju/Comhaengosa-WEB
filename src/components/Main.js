@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const Main = () => {
+    const ref = useRef(null)
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            console.log("window", window.scrollY)
+        })
+    }, [window])
     return (
-        <div className="p-10 flex-col md:flex-row md:flex text-center md:text-left  justify-center md:space-x-40 md:pt-40">
+        <div ref={ref} className=" p-10 flex-col md:flex-row md:flex text-center md:text-left  justify-center md:space-x-40 md:pt-40">
             <div className=" py-20 pb-0">
                 <div className="text-4xl md:text-5xl flex items-center font-bold justify-center md:justify-normal md:pt-20 ">
                     왜{" "}
@@ -11,7 +18,7 @@ const Main = () => {
                     </span>
                     인가?
                 </div>
-                <div className="py-10 space-y-5 text-textColor text-lg">
+                <div className="py-10 space-y-5 text-black text-lg">
                     <div>
                         컴행어사는 카이스트 출신
                         <br className="md:hidden" /> 인공지능 분야 연구자들이
