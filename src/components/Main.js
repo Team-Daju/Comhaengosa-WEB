@@ -1,15 +1,8 @@
 import React, { useEffect, useRef } from "react";
 
 const Main = () => {
-    const ref = useRef(null)
-
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            console.log("window", window.scrollY)
-        })
-    }, [window])
     return (
-        <div ref={ref} className=" p-10 flex-col md:flex-row md:flex text-center md:text-left  justify-center md:space-x-40 md:pt-40">
+        <div className=" p-10 flex-col md:flex-row md:flex text-center md:text-left  justify-center md:space-x-40 md:pt-40">
             <div className=" py-20 pb-0">
                 <div className="text-4xl md:text-5xl flex items-center font-bold justify-center md:justify-normal md:pt-20 ">
                     왜
