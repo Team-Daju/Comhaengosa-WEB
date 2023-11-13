@@ -130,21 +130,7 @@ const chattings = [
 
 
 const DontWorry = () => {
-    const [leaving, setLeaving] = useState(false);
-    const [isMd, setIsMd] = useState(false)
-    const isWindowMd = () => {
-        if (window.outerWidth < 768) setIsMd(true)
-        else setIsMd(false)
-    }
-    useEffect(() => {
 
-        isWindowMd()
-        window.addEventListener("scroll", () => {
-            console.log(window.outerWidth)
-            isWindowMd()
-        })
-
-    }, [])
     return (
         <div className='px-8 pt-24 overflow-x-hidden justify-center flex flex-col-reverse md:space-x-40 md:flex md:flex-row' >
             <div className='px-5 pt-8 md:px-14 md:pt-16 bg-primaryColor bg-opacity-10 rounded-3xl relative border flex text-xs md:text-sm'>
@@ -164,29 +150,31 @@ const DontWorry = () => {
                         .map((chatting, i) => (
                             <SwiperSlide
                                 key={i}
-                                className='bg-white p-5 rounded-t-3xl ' style={{}}>
+                                className='bg-white p-5 rounded-t-3xl '>
 
                                 <div className='flex justify-center font-bold pb-5'>
                                     컴행어사
                                 </div>
                                 <div className='space-y-3'>
                                     {chatting.chats.map(chat => (
-                                        chat.who === 0 ? <MeWrap>
-                                            <Me>
-                                                {chat.content}
-                                            </Me>
-                                        </MeWrap> : <YouWrap >
-                                            <You>
-                                                {chat.content}
-                                            </You>
-                                        </YouWrap>
+                                        chat.who === 0 ?
+                                            <MeWrap>
+                                                <Me>
+                                                    {chat.content}
+                                                </Me>
+                                            </MeWrap> :
+                                            <YouWrap >
+                                                <You>
+                                                    {chat.content}
+                                                </You>
+                                            </YouWrap>
                                     ))}
                                 </div>
                             </SwiperSlide>
                         ))}
                 </Swiper>
             </div>
-            <div className='mb-20 ' >
+            <div className='mb-20 text-center md:text-left' >
                 <div className='text-primaryColor font-bold text-2xl'>
                     쉽지 않은 서버 선택,
                 </div>
