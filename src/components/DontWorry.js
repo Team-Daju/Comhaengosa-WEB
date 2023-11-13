@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
 import { BsFileEarmarkPdf } from "react-icons/bs"
+import { AiFillFileImage } from "react-icons/ai"
 
 const MeWrap = tw.div`
 flex justify-end ml-10
@@ -73,6 +74,24 @@ const chattings = [
                 content: "스펙의 차이는 없고 케이스 형태가 다릅니다! 시각적 자료도 전달드립니다 🙂",
             },
             {
+                who: 1,
+                content:
+                    <div className='flex items-center space-x-2'>
+                        <div className='pl-1'><AiFillFileImage /> </div>
+                        <span>서버렉 타입.png</span>
+                    </div>
+                ,
+            },
+            {
+                who: 1,
+                content:
+                    <div className='flex items-center space-x-2'>
+                        <div className='pl-1'><AiFillFileImage /></div>
+                        <span>워크스테이션 타입.png</span>
+                    </div>
+                ,
+            },
+            {
                 who: 0,
                 content: "다행이네요. 워크스테이션 타입으로 서버 C 구매할게요!",
             },
@@ -99,14 +118,11 @@ const chattings = [
             },
             {
                 who: 1,
-                content: <div className=' flex justify-center items-center space-x-4'>
-                    <div className='pl-2'>
+                content: <div className=' flex justify-center items-center space-x-3'>
+                    <div className='pl-1'>
                         <BsFileEarmarkPdf />
                     </div>
-                    <div className='flex flex-col'>
-                        <span className='font-bold'>서버 D 렌탈 플랜.pdf</span>
-                        <span className='text-gray-400'>xx.kb</span>
-                    </div>
+                    <span>서버 D 렌탈 플랜.pdf</span>
                 </div>
 
 
@@ -181,7 +197,7 @@ const DontWorry = () => {
                 <div className='pt-5 pb-16 text-4xl md:text-5xl font-bold'>
                     혼자 고민하지 마세요
                 </div>
-                <div className='space-y-5 text-textColor'>
+                <div className='space-y-5 text-black'>
                     <div>
                         컴행어사는 다양한 연구 경험과 전문성을 기반으로<br />
                         여러분의 연구 환경에 꼭 필요한 최적의 서버만을 추천합니다.

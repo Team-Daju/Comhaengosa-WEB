@@ -53,10 +53,9 @@ const Smart = () => {
                 if (y3 < 400) setIsScroll3(true)
             } else {
                 if (y1 < 600) setIsScroll1(true)
-                if (y2 < 350) setIsScroll2(true)
-                if (y3 < 200) setIsScroll3(true)
+                if (y2 < 500) setIsScroll2(true)
+                if (y3 < 400) setIsScroll3(true)
             }
-
         })
 
     }, [])
