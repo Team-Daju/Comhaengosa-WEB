@@ -191,7 +191,25 @@ const DontWorry = () => {
     }, [])
     return (
         <div className='pt-24 overflow-x-hidden flex justify-center space-x-40 flex' >
-            <div className=' w-96'>
+            <div className='mb-20' >
+                <div className='text-primaryColor font-bold text-2xl'>
+                    쉽지 않은 서버 선택,
+                </div>
+                <div className='pt-10 pb-16 text-4xl md:text-5xl font-bold'>
+                    혼자 고민하지 마세요
+                </div>
+                <div className='space-y-5 text-textColor'>
+                    <div>
+                        컴행어사는 다양한 연구 경험과 전문성을 기반으로<br />
+                        여러분의 연구 환경에 꼭 필요한 최적의 서버만을 추천합니다.
+                    </div>
+                    <div >
+                        불필요한 지출 없이 탁월한 성능과 합리적인 가격으로<br />
+                        딥러닝 서버를 사용하세요!
+                    </div>
+                </div>
+            </div>
+            <div className=' w-[400px]'>
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={100}
@@ -229,25 +247,6 @@ const DontWorry = () => {
                         ))}
                 </Swiper>
             </div>
-            <div className='mb-20' >
-                <div className='text-primaryColor font-bold text-2xl'>
-                    쉽지 않은 서버 선택,
-                </div>
-                <div className='pt-10 pb-16 text-4xl md:text-5xl font-bold'>
-                    혼자 고민하지 마세요
-                </div>
-                <div className='space-y-5 text-textColor'>
-                    <div>
-                        컴행어사는 다양한 연구 경험과 전문성을 기반으로<br />
-                        여러분의 연구 환경에 꼭 필요한 최적의 서버만을 추천합니다.
-                    </div>
-                    <div >
-                        불필요한 지출 없이 탁월한 성능과 합리적인 가격으로<br />
-                        딥러닝 서버를 사용하세요!
-                    </div>
-                </div>
-            </div>
-
         </div>
     );
 };
