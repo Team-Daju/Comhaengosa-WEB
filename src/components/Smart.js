@@ -16,7 +16,7 @@ const Div = tw.div`
     bg-primaryColor
     py-7
     text-lg
-    px-10
+    px-6
     md:px-56
     flex 
     flex-col
@@ -26,7 +26,6 @@ const Div = tw.div`
     transition-all
 `
 const Smart = () => {
-    const [isClick, setIsClick] = useState(false)
     return (
         <div className='my-20 flex flex-col items-center py-20'>
             <div className='flex flex-col md:flex-row items-center text-4xl md:text-5xl font-bold pb-24 '>
@@ -52,7 +51,9 @@ const Smart = () => {
                     <SpanBold>초기 비용</SpanBold>에 대한 고민이 줄어듭니다.
                 </Div>
                 <Div >
-                    고가의 서버 자산을 <SpanBold className='mr-1'>비용처리 </SpanBold>할 수 있습니다.
+                    고가의 서버를 보유할 필요없이 매월 비용처리하여
+                    <div><SpanBold>세금감면</SpanBold>이 쉬워집니다.
+                    </div>
                 </Div>
             </div>
 

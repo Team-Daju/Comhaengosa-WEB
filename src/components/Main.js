@@ -12,7 +12,7 @@ const Main = () => {
         <div ref={ref} className=" p-10 flex-col md:flex-row md:flex text-center md:text-left  justify-center md:space-x-40 md:pt-40">
             <div className=" py-20 pb-0">
                 <div className="text-4xl md:text-5xl flex items-center font-bold justify-center md:justify-normal md:pt-20 ">
-                    왜{" "}
+                    왜
                     <span className="font-ebs pl-3 text-primaryColor">
                         컴행어사
                     </span>
