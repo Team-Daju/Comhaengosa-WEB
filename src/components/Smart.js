@@ -20,8 +20,7 @@ const Div = tw.div`
     bg-primaryColor
     py-7
     text-lg
-    px-4
-    md:px-56
+    w-full
     flex 
     flex-col
     md:flex-row
@@ -60,8 +59,8 @@ const Smart = () => {
 
     }, [])
     return (
-        <div className='my-20 flex flex-col items-center py-20'>
-            <div className='flex flex-col md:flex-row items-center text-4xl md:text-5xl font-bold pb-24 '>
+        <div className='p-3 my-20 flex flex-col items-center py-20'>
+            <div className='flex flex-col md:flex-row items-center text-3xl md:text-5xl font-bold pb-24 '>
                 <div>
                     딥러닝 서버,
                 </div>
@@ -70,7 +69,7 @@ const Smart = () => {
                 </div>
 
             </div>
-            <div className='flex flex-col  space-y-14'>
+            <div className='w-full md:w-[768px] space-y-14 '>
                 <Div ref={ref1} className={cls('space-x-1', isScroll1 === true ? "translate-y-0 opacity-100" : "")}>
                     <div className='flex items-center'>
                         <SpanAccent className='font-bold'>컴행어사</SpanAccent>는 <SpanBold>단기 및 장기 렌탈 플랜</SpanBold>을
@@ -83,8 +82,8 @@ const Smart = () => {
                 <Div ref={ref2} className={cls('flex-row', isScroll2 === true ? "translate-y-0 opacity-100" : "")}>
                     <SpanBold>초기 비용</SpanBold>에 대한 고민이 줄어듭니다.
                 </Div>
-                <Div ref={ref3} className={cls(isScroll3 === true ? "translate-y-0 opacity-100" : "")}>
-                    고가의 서버를 보유할 필요없이
+                <Div ref={ref3} className={cls("space-x-1", isScroll3 === true ? "translate-y-0 opacity-100" : "")}>
+                    <span>고가의 서버를 보유할 필요없이</span>
                     <div>
                         매월 비용처리하여 <SpanBold>세금감면</SpanBold>이 쉬워집니다.
                     </div>

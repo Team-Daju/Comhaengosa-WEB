@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const Hr = tw.hr`
-  border-primaryColor mx-8 md:mx-20 opacity-20
+  border-primaryColor mx-3 sm:mx-20 opacity-20
 `;
 
 function App() {

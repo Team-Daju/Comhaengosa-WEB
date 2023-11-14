@@ -148,8 +148,8 @@ const chattings = [
 const DontWorry = () => {
 
     return (
-        <div className='px-8 pt-24 overflow-x-hidden justify-center flex flex-col-reverse md:space-x-40 md:flex md:flex-row' >
-            <div className='px-5 pt-8 md:px-14 md:pt-16 bg-primaryColor bg-opacity-10 rounded-3xl relative border flex text-xs md:text-sm'>
+        <div className='px-3 pt-24 overflow-x-hidden justify-center flex flex-col-reverse lg:space-x-20 xl:space-x-40 lg:flex lg:flex-row' >
+            <div className='md:mx-40 lg:mx-0 px-5 pt-8 lg:px-14 lg:pt-16 bg-primaryColor bg-opacity-10 rounded-3xl relative border flex text-xs lg:text-sm'>
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={100}
@@ -190,17 +190,17 @@ const DontWorry = () => {
                         ))}
                 </Swiper>
             </div>
-            <div className='mb-20 text-center md:text-left' >
+            <div className='mb-20 text-center lg:text-left  ' >
                 <div className='text-primaryColor font-bold text-2xl'>
                     쉽지 않은 서버 선택,
                 </div>
-                <div className='pt-5 pb-16 text-4xl md:text-5xl font-bold'>
+                <div className='pt-5 pb-16 text-4xl lg:text-5xl font-bold'>
                     혼자 고민하지 마세요
                 </div>
-                <div className='space-y-5 text-black'>
+                <div className='space-y-5 text-black text-sm md:text-lg'>
                     <div>
-                        컴행어사는 다양한 연구 경험과 전문성을 기반으로<br />
-                        여러분의 연구 환경에 꼭 필요한 최적의 서버만을 추천합니다.
+                        컴행어사는 다양한 연구 경험과  전문성을 기반으로<br />
+                        여러분의 연구 환경에 꼭 필요한 <br className='md:hidden' />최적의 서버만을 추천합니다.
                     </div>
                     <div >
                         불필요한 지출 없이 탁월한 성능과 합리적인 가격으로<br />
