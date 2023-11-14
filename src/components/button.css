@@ -1,0 +1,10 @@
+.swiper-button-next {
+    position: absolute;
+    right: -10px;
+    z-index: 100;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: -10px
+}

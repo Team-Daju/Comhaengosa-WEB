@@ -11,7 +11,7 @@ const Main = () => {
                     </span>
                     인가?
                 </div>
-                <div className="py-10 space-y-5 text-black text-sm md:text-lg">
+                <div className="py-10 space-y-5 text-black text-sm sm:text-lg">
                     <div>
                         컴행어사는 카이스트 출신
                         <br className="lg:hidden" /> 인공지능 분야 연구자들이
