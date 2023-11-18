@@ -149,8 +149,9 @@ const chattings = [
 const DontWorry = () => {
 
     return (
-        <div className='px-3 pt-24 overflow-x-hidden justify-center flex flex-col-reverse lg:space-x-20 xl:space-x-40 lg:flex lg:flex-row' >
-            <div className='sm:mx-40 lg:mx-0 px-5 pt-8 lg:px-14 lg:pt-16 bg-primaryColor bg-opacity-10 rounded-3xl relative border flex text-xs lg:text-sm'>
+
+        <div className='px-3 pt-24 overflow-x-hidden justify-center flex flex-col-reverse lg:space-x-20 xl:space-x-40 lg:flex lg:flex-row items-center' >
+            <div className=' sm:w-[430px] lg:w-auto px-5 pt-8 lg:px-14 lg:pt-16 bg-primaryColor bg-opacity-10 rounded-3xl relative border flex text-xs lg:text-sm'>
                 <Swiper
                     pagination={{
                         clickable: true,
@@ -162,15 +163,19 @@ const DontWorry = () => {
                         delay: 3000,
                         disableOnInteraction: false,
                     }}
+                    pagination={{
+                        clickable: true
+                    }}
                     modules={[Pagination, Autoplay]}
                     loop={true}
-                    className=' w-[400px] rounded-t-3xl flex-1 shadow-[5px_4px_10px_0px_rgb(186,196,255)]'
+                    className='w-[280px] sm:w-[400px] absolute rounded-t-3xl  bottom-0 shadow-[5px_4px_10px_0px_rgb(186,196,255)]'
                 >
                     {chattings
                         .map((chatting, i) => (
                             <SwiperSlide
                                 key={i}
                                 className='w-[400px] bg-white p-5 pb-7 rounded-t-3xl '>
+
 
                                 <div className='flex justify-center font-bold pb-5'>
                                     컴행어사
