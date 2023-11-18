@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import tw from "tailwind-styled-components";
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import "./button.css"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { BsFileEarmarkPdf } from "react-icons/bs"
 import { AiFillFileImage } from "react-icons/ai"
 
@@ -147,9 +149,13 @@ const chattings = [
 const DontWorry = () => {
 
     return (
+
         <div className='px-3 pt-24 overflow-x-hidden justify-center flex flex-col-reverse lg:space-x-20 xl:space-x-40 lg:flex lg:flex-row items-center' >
             <div className=' sm:w-[430px] lg:w-auto px-5 pt-8 lg:px-14 lg:pt-16 bg-primaryColor bg-opacity-10 rounded-3xl relative border flex text-xs lg:text-sm'>
                 <Swiper
+                    pagination={{
+                        clickable: true,
+                    }}
                     slidesPerView={1}
                     spaceBetween={100}
                     grabCursor={true}
@@ -168,8 +174,8 @@ const DontWorry = () => {
                         .map((chatting, i) => (
                             <SwiperSlide
                                 key={i}
-                                className='bg-white p-5 rounded-t-3xl'
-                            >
+                                className='w-[400px] bg-white p-5 pb-7 rounded-t-3xl '>
+
 
                                 <div className='flex justify-center font-bold pb-5'>
                                     컴행어사
@@ -193,7 +199,7 @@ const DontWorry = () => {
                         ))}
                 </Swiper>
             </div>
-            <div className='mb-20 text-center lg:text-left  ' >
+            <div className='md:mt-40 mb-20 text-center lg:text-left  ' >
                 <div className='text-primaryColor font-bold text-2xl'>
                     쉽지 않은 서버 선택,
                 </div>
