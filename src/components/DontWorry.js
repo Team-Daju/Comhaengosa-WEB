@@ -10,18 +10,18 @@ import { BsFileEarmarkPdf } from "react-icons/bs"
 import { AiFillFileImage } from "react-icons/ai"
 
 const MeWrap = tw.div`
-flex justify-end ml-10
+ml-10 chat chat-end
 `
 const YouWrap = tw.div`
-flex justify-start mr-10
+flex justify-start  mr-10 chat chat-start
 `
 
 const Me = tw.div`
-    bg-primaryColor rounded-md p-3 px-4 text-white
+    bg-primaryColor rounded-md p-3 px-4 text-white chat-bubble
 `
 
 const You = tw(Me)`
-    bg-[#E7E7E7] px-3 text-black
+    bg-[#E7E7E7] px-3 text-black chat-bubble
 `
 const chattings = [
     {
@@ -177,13 +177,21 @@ const DontWorry = () => {
                                 <div className='flex justify-center font-bold pb-5'>
                                     컴행어사
                                 </div>
-                                <div className='space-y-3'>
-                                    {chatting.chats.map(chat => (
+                                <div className='space-y-1'>
+                                    {chatting.chats.map((chat) => (
                                         chat.who === 0 ?
-                                            <MeWrap>
+                                            <MeWrap className='items-end'>
+
                                                 <Me>
                                                     {chat.content}
                                                 </Me>
+                                                <div>
+                                                    <div className='border rounded-full flex items-center justify-center pt-1 px-[2px]  '>
+                                                        <img src={`/imgs/chat${i + 1}.png`} className=' w-10 h-10 rounded-full ' />
+                                                    </div>
+                                                </div>
+
+
                                             </MeWrap> :
                                             <YouWrap >
                                                 <You>
