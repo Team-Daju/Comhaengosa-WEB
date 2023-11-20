@@ -10,10 +10,10 @@ import { BsFileEarmarkPdf } from "react-icons/bs"
 import { AiFillFileImage } from "react-icons/ai"
 
 const MeWrap = tw.div`
-ml-10 chat chat-end
+items-end xs:ml-10 chat chat-end
 `
 const YouWrap = tw.div`
-flex justify-start  mr-10 chat chat-start
+items-end xs:mr-10 chat chat-start
 `
 
 const Me = tw.div`
@@ -36,7 +36,8 @@ const chattings = [
             },
             {
                 who: 1,
-                content: "해당 분야는 다루는 데이터 크기가 상당히 크다보니 xxx 부품들이 탑재된 서버 A를 추천드립니다.  "
+                content: "해당 분야는 다루는 데이터 크기가 상당히 크다보니 xxx 부품들이 탑재된 서버 A를 추천드립니다. ",
+                continue: true
             },
             {
                 who: 0,
@@ -64,7 +65,8 @@ const chattings = [
             },
             {
                 who: 1,
-                content: "그런 경우, 사무실에서도 사용가능한 워크스테이션 형태를 추천드립니다!"
+                content: "그런 경우, 사무실에서도 사용가능한 워크스테이션 형태를 추천드립니다!",
+                continue: true
             },
             {
                 who: 0,
@@ -82,6 +84,7 @@ const chattings = [
                         <span>서버렉 타입.png</span>
                     </div>
                 ,
+                continue: true
             },
             {
                 who: 1,
@@ -91,6 +94,7 @@ const chattings = [
                         <span>워크스테이션 타입.png</span>
                     </div>
                 ,
+                continue: true
             },
             {
                 who: 0,
@@ -115,7 +119,7 @@ const chattings = [
             },
             {
                 who: 1,
-                content: "서버 D의 렌탈 상품들은 첨부드린 견적서에 정리드렸습니다!",
+                content: "서버 D의 렌탈 상품들은 첨부드린 견적서에 정리드렸습니다!"
             },
             {
                 who: 1,
@@ -124,7 +128,8 @@ const chattings = [
                         <BsFileEarmarkPdf />
                     </div>
                     <span>서버 D 렌탈 플랜.pdf</span>
-                </div>
+                </div>,
+                continue: true
 
 
             },
@@ -180,7 +185,7 @@ const DontWorry = () => {
                                 <div className='space-y-1'>
                                     {chatting.chats.map((chat) => (
                                         chat.who === 0 ?
-                                            <MeWrap className='items-end'>
+                                            <MeWrap >
 
                                                 <Me>
                                                     {chat.content}
@@ -191,9 +196,19 @@ const DontWorry = () => {
                                                     </div>
                                                 </div>
 
-
                                             </MeWrap> :
-                                            <YouWrap >
+                                            <YouWrap  >
+
+                                                {!chat?.continue ?
+                                                    <div>
+                                                        <div className='border rounded-full flex items-center justify-center '>
+                                                            <img src={`/imgs/comLogo.png`} className=' w-10 h-10 rounded-full ' />
+                                                        </div>
+                                                    </div> :
+                                                    <div className='ml-9'>
+
+                                                    </div>}
+
                                                 <You>
                                                     {chat.content}
                                                 </You>
