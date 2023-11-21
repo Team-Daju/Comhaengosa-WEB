@@ -8,3 +8,7 @@
     position: absolute;
     left: -10px
 }
+
+.chat-bubble:before {
+    bottom: 15px;
+}
